@@ -1,11 +1,11 @@
-echo "Network Scanning"
+echo "Aggressive Network Scanning"
 
 read -p "Enter your input: " input
 echo "enter the ip address : $input"
 
-read -p "enter the options :" options
+# read -p "enter the options :" options
 
-nmap $input $options -oG output.gnmap
+nmap -A $input -oG output.gnmap
 
 clear
 
